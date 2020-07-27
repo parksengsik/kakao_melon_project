@@ -26,3 +26,21 @@ from scipy import stats
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 ```
+
+
+
+* 데이터 불러오기
+```python
+train = pd.read_json('train.json', typ = 'frame')
+song_meta = pd.read_json('song_meta.json', typ = 'frame')
+val = pd.read_json('val.json', typ='frame')
+test = pd.read_json('test.json', typ='frame')
+```
+
+
+
+* 데이터 전처리
+```python
+data = train[['id','songs','tags']]     
+# train(플레이리스트 데이터)에서 컬럼 'id'와 'songs', 'tags'를 추출하여 Dataframe 'data' 저장합니다.
+```
