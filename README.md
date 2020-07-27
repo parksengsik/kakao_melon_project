@@ -65,6 +65,7 @@ data_song['tags'] = data_song['tags'].astype(str)
 del data_song_unnsest
 # 플레이리스트에 수록된 곡들을 하나씩 분리하여 Dataframe 'data_song'에 저장합니다.
 ```
+    + 플레이리스트에 수록된 곡들을 하나씩 분리하여 Dataframe 'data_song'에 저장합니다.
 ```python
 data_song_tags = data_song.sort_values(by = ['songs','tags']).groupby('songs').tags.apply(list).reset_index(name = 'tags')
 # Dataframe 'data_song'에서 곡별로 그룹화를 시켜 곡마다 'tags'를 합쳐주고 Dataframe 'data_song_tags'에 저장합니다.
