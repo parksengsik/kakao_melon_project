@@ -7,7 +7,7 @@
 
 
 ### 프로그램 소스코드 설명
-#### 1. 라이브러리 불러오기
+#### (1) 라이브러리 불러오기
 ``` python
 import pandas as pd
 import numpy as np
@@ -29,7 +29,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 
-#### 2. 데이터 불러오기
+#### (2) 데이터 불러오기
 ```python
 train = pd.read_json('train.json', typ = 'frame')
 song_meta = pd.read_json('song_meta.json', typ = 'frame')
@@ -39,7 +39,7 @@ test = pd.read_json('test.json', typ='frame')
 
 
 
-#### 3. 데이터 전처리
+#### (3) 데이터 전처리
 ```python
 data = train[['id','songs','tags']]     
 ```
@@ -157,7 +157,7 @@ count_matrix_tag = count.fit_transform(data_tags_song['songs'])
 
 
 
-#### 4. 모델링
+#### (4) 모델링
 ```python
 def sec(times):
     return str(datetime.timedelta(seconds=times)).split(".")[0]
@@ -360,7 +360,7 @@ for i in range(0,len(val_id)) :
 
 
 
-#### 5. 추천을 받지 못한 경우와 조건에 만족하지못한 플레이리스트 채우기
+#### (5) 추천을 받지 못한 경우와 조건에 만족하지못한 플레이리스트 채우기
 ```python
 result_data = pd.DataFrame(dic_last_all)
 ```
