@@ -1,7 +1,3 @@
-# kakao_melon_project
-
-
-
 ## Kakao arena - Melon Playlist Continuation
 
 
